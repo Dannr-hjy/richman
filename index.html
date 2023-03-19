@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>大富翁 V2</title>
+	<style type="text/css">
+		body {
+			background-color: #f7f7f7;
+			font-family: Arial, sans-serif;
+		}
+		h1 {
+			text-align: center;
+			color: #333;
+		}
+        h2 {
+			text-align: center;
+			color: #333;
+		}
+		.container {
+			margin: 50px auto;
+			text-align: center;
+		}
+		.btn {
+			display: inline-block;
+			padding: 10px 20px;
+			font-size: 18px;
+			font-weight: bold;
+			color: #fff;
+			background-color: #333;
+			border: none;
+			border-radius: 5px;
+			cursor: pointer;
+			transition: all 0.3s ease;
+		}
+		.btn:hover {
+			background-color: #555;
+		}
+		.btn.active {
+			background-color: #f00;
+		}
+        a{
+            text-decoration:none
+        };
+	</style>
+</head>
+<body>
+    <h1>大富翁 V2</h1>
+	<h2>请选择启动项</h2>
+	<div class="container">
+		<a href="V1.4.html"><button class="btn" id="btn1">V1.4 精简版游戏</button></a>
+		<a href="V1.5.2.html"><button class="btn" id="btn2">V1.5.2 完整版游戏</button></a>
+	</div>
+	<script type="text/javascript">
+		// 获取按钮元素
+		var btn1 = document.getElementById('btn1');
+		var btn2 = document.getElementById('btn2');
+
+		// 给按钮添加点击事件
+		btn1.addEventListener('click', function() {
+			// 移除btn2的active样式
+			btn2.classList.remove('active');
+			// 给btn1添加active样式
+			btn1.classList.add('active');
+		});
+
+		btn2.addEventListener('click', function() {
+			// 移除btn1的active样式
+			btn1.classList.remove('active');
+			// 给btn2添加active样式
+			btn2.classList.add('active');
+		});
+	</script>
+</body>
+</html>
